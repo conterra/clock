@@ -1,0 +1,140 @@
+.clock-frame{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: #FFF;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 10px solid #12A5F4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+/*    background-image: url(http://upload.wikimedia.org/wikipedia/de/thumb/7/7c/Minutensprunguhr_animiert.gif/220px-Minutensprunguhr_animiert.gif);
+    background-position: -20px;*/
+}
+.clock .hour {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.clock .hour:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 85px;
+    width: 10px;
+    top: 30px;
+}
+.clock .minute {
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.clock .minute:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 100px;
+    width: 8px;
+    top: 5px;
+}
+.clock .second {
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+.clock .second:before {
+    position: absolute;
+    content: "";
+    background: #FD1111;
+    height: 107px;
+    width: 3px;
+    top: 10px;
+}
+.clock .second:after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    top: 22px;
+    height: 20px;
+    border-radius: 100%;
+    background: #FD1111;
+    right: -9px;
+}
+.clock-date{
+    text-align: right;
+    position: absolute;
+    right: 15%;
+    top: 40%;
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    border: 2px inset #E9E9E9
+}
+
+.marker{
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.marker:before {
+    position: absolute;
+    content: "";
+    background: #262626;
+    height: 7px;
+    width: 2px;
+}
+
+.marker-large{
+    width: 6px;
+}
+.marker-large:before{
+    height: 22px;
+    width: 6px;
+}
+
+.digital-clock{
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 26px;
+    text-align: center;
+}
+
+/*Different MainBorder Color for each of map.apps themes*/
+.everlasting .clock-frame{
+    border-color: #12A5F4
+}
+.winter .clock-frame{
+    border-color: #3C3C3C
+}
+.spring .clock-frame{
+    border-color: #16A085
+}
+.summer .clock-frame{
+    border-color: #8C0F1A
+}
+.autumn .clock-frame{
+    border-color: #2980B9
+}
+.day .clock-frame{
+    border-color: #99cc00
+}
+.night .clock-frame{
+    border-color: #7dcdea
+}

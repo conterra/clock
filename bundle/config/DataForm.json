@@ -1,0 +1,24 @@
+{
+    "dataform-version": "1.0.0",
+    "size": {
+        "h": 300,
+        "w": 500
+    },
+    "type": "gridpanel",
+    "showLabels": true,
+    "cols": 1,
+    "children": [{
+            "type": "radiobutton",
+            "field": "clockMode",
+            "value": "analog",
+            "groupId": "group1",
+            "title": "${dataform.analog}"
+        }, {
+            "type": "radiobutton",
+            "field": "clockMode",
+            "value": "digital",
+            "groupId": "group1",
+            "title": "${dataform.digital}"
+        }
+    ]
+}

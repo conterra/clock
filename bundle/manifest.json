@@ -1,0 +1,62 @@
+{
+    "Bundle-SymbolicName": "clock",
+    "Bundle-Version": "1.0",
+    "Bundle-Name": "Clock",
+    "Bundle-Description": "Simple bundle that displays the current time",
+    "Bundle-Vendor": "con terra GmbH",
+    "Bundle-RequiredExecutionEnvironment": ["IE:[10,]", "FF", "Chrome", "Safari", "iPhone", "iPad"],
+    
+    "Config-Bundle-Location": "/config",
+    
+    "CSS-Themes-Extension": [{
+            "name": "*",
+            "files": ["./styles/clock.css"]
+        }],
+    
+    "layout-widgets": [{
+            "widgetRole": "clock",
+            "window": {
+                "title": "${window.title}",
+                "marginBox": {
+                    "t": 65,
+                    "l": 20,
+                    "h": 275,
+                    "w": 260
+                },
+                "resizable":false,
+                "closable":true,
+                "minimizeOnClose":true,
+                "dockable":true,
+                "dockingBar":"${id}-dockingBarBottomRight",
+                "dockTool":"clockToggleTool"
+            }
+        }
+    ],
+    
+    "Components": [{
+            "name": "Clock",
+            "provides": ["dijit.Widget"],
+            "propertiesConstructor": true,
+            "properties": {
+                "widgetRole": "clock",
+                "clockMode": "analog"
+            }
+        },
+        {
+            "name": "ClockToggleTool",
+            "impl": "ct/tools/Tool",
+            "provides": ["ct.tools.Tool"],
+            "propertiesConstructor": true,
+            "properties": {
+                "id": "clockToggleTool",
+                "title": "${tool.title}",
+                "iconClass":"icon-time-clock",
+                "tooltip": "${tool.tooltip}",
+                "toolRole": "toolset",
+                "togglable": true,
+                "rules": {
+                    "noGroup": true
+                }
+            }
+        }]
+}

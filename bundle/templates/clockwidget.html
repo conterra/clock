@@ -1,0 +1,23 @@
+<div>
+    <div data-dojo-attach-point="mainContainer" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:false, 'class':'fullwidthAndHeight'">
+        <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center','class':'noPadding'">
+            <div data-dojo-attach-point="node_analog">
+                <div data-dojo-attach-point="clock_frame" class="clock-frame">
+                    <div data-dojo-attach-point="date_node" class="clock-date"></div>
+                    <div data-dojo-attach-point="hoursPointer" class="hour"></div>
+                    <div data-dojo-attach-point="minutesPointer" class="minute"></div>
+                    <div data-dojo-attach-point="secondsPointer" class="second"></div>
+                </div>
+            </div>
+            <div class="digital-clock">
+                <span data-dojo-attach-point="node_digital" class="dijitDisplayNone"></span>
+            </div>
+        </div>
+        <!--
+		<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'bottom','class':'noPadding'" style="height: 16px;">
+            <input data-dojo-attach-point="utcCheckBox" id="utcCheck" data-dojo-type="dijit/form/CheckBox" data-dojo-attach-event="onChange:_utcCheckboxChanged">
+            <label for="utcCheck">Use UTC-Time</label>
+        </div> 
+		-->
+    </div>
+</div>

@@ -1,0 +1,52 @@
+{
+    "Bundle-SymbolicName": "clock-config",
+    "Bundle-Version": "1.0",
+    "Bundle-Name": "${bundleName}",
+    "Bundle-Description": "${bundleDescription}",
+    
+    "Require-Bundle": [{
+        "name": "dataform",
+        "version": "[3.0.0,)",
+        "policy" : "optional"
+    },{
+        "name": "wizard",
+        "version": "[3.0.0,)"
+    }],
+
+    "Components": [{
+        "name": "BuilderEntry",
+        "impl": "ct/Stateful",
+        "provides": ["wizard.MenuEntry"],
+        "propertiesConstructor": true,
+        "properties": {
+            "parentNodeId": "appBuilderWidgetsNode",
+            "menuNode": {
+                "title": "Clock",
+                "iconUrl": "resource('styles/images/bundleIcon.png')",
+                "widget": "clockBuilderWidget"
+            }
+        }
+    },{
+        "name": "BuilderWidget",
+        "impl": "wizard/DataFormBuilderWidgetFactory",
+        "provides": ["dijit.wizard.Widget"],
+        "immediate": true,
+        "instanceFactory": true,
+        "properties": {
+            "dataformFile": "resource('./DataForm.json')",
+            "bid": "clock",
+            "pid": "clock-Clock",
+            "id": "clockBuilderWidget",
+            "defaultProperties": {
+                "clockMode" : "analog"
+            }
+        },
+        "references": [{
+            "name": "_configAdminService",
+            "providing": "ct.framework.api.ConfigurationAdmin"
+        },{
+            "name": "_dataformService",
+            "providing": "dataform.DataFormService"
+        }]
+    }]
+}
