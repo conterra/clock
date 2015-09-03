@@ -7,7 +7,7 @@ define(
     },
     dataform: {
         analog: "Analoge Uhrzeit",
-        digital: "Digitale Uhrzeit",
+        digital: "Digitale Uhrzeit"
     }
 })
 );

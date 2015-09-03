@@ -1,9 +1,11 @@
 {
     "Bundle-SymbolicName": "clock",
-    "Bundle-Version": "1.0",
+    "Bundle-Version": "1.0.1",
     "Bundle-Name": "Clock",
     "Bundle-Description": "Simple bundle that displays the current time",
     "Bundle-Vendor": "con terra GmbH",
+    "Product-Name": "map.apps Developer Network",
+    
     "Bundle-RequiredExecutionEnvironment": ["IE:[10,]", "FF", "Chrome", "Safari", "iPhone", "iPad"],
     
     "Config-Bundle-Location": "/config",

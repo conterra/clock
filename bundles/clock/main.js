@@ -1,1 +1,1 @@
-define(["dojo/i18n!./nls/bundle"],{});
+define(["dojo/i18n!./nls/bundle"], {});
