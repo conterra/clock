@@ -4,7 +4,7 @@
     "Bundle-Name": "Clock",
     "Bundle-Description": "Simple bundle that displays the current time",
     "Bundle-Vendor": "con terra GmbH",
-    "Product-Name": "map.apps Developer Network",
+    "Product-Name": "con terra Developer Network",
     
     "Bundle-RequiredExecutionEnvironment": ["IE:[10,]", "FF", "Chrome", "Safari", "iPhone", "iPad"],
     
