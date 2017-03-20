@@ -1,6 +1,6 @@
 {
     "Bundle-SymbolicName": "clock",
-    "Bundle-Version": "1.0.1-SNAPSHOT",
+    "Bundle-Version": "1.0.2-SNAPSHOT",
     "Bundle-Name": "Clock",
     "Bundle-Description": "Simple bundle that displays the current time",
     "Bundle-Vendor": "con terra GmbH",

@@ -1,6 +1,6 @@
 {
     "Bundle-SymbolicName": "clock-config",
-    "Bundle-Version": "1.0",
+    "Bundle-Version": "1.0.2-SNAPSHOT",
     "Bundle-Name": "${bundleName}",
     "Bundle-Description": "${bundleDescription}",
     
