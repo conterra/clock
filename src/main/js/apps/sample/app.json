@@ -1,73 +1,113 @@
 {
-    "properties": {        
-        "amdPackages": "apprt@^3.2.1"
+  "properties": {
+    "amdPackages": "apprt@^3.2.1"
+  },
+  "load": {
+    "allowedBundles": [
+      "system@^3.2.1",
+      "templatelayout@^3.2.1",
+      "map@^3.2.1",
+      "notifier@^3.2.1",
+      "toolset@^3.2.1",
+      "toolrules@^3.2.1",
+      "parametermanager@^3.2.1",
+      "custominfo@^3.2.1",
+      "banner@^3.2.1",
+      "clock"
+    ]
+  },
+  "bundles": {
+    "banner": {
+      "BannerWidget": {
+        "label": "Developer Network",
+        "image": "https://www.conterra.de/~/media/conterra/images/site_logos/conterra-logo.ashx",
+        "imagePosition": "above",
+        "link": "http://developernetwork.conterra.de"
+      }
     },
-    "load": {
-        "allowedBundles": [
-            "system@^3.2.1",
-            "templatelayout@^3.2.1",
-            "map@^3.2.1",
-            "notifier@^3.2.1",
-            "toolset@^3.2.1",
-            "toolrules@^3.2.1",
-            "parametermanager@^3.2.1",
-            "clock"
-        ]
-    },
-    "bundles": {
-        "map": {
-            "MapModelFactory": {
-                "_configData": {
-                    "maps": [
-                        {
-                            "baseLayer": [
-                                {
-                                    "id": "streets",
-                                    "title": "Streets",
-                                    "service": "streets",
-                                    "layers": [
-                                        "*"
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            },
-            "MapState": {
-                "initialExtent": {
-                    "xmin": 600000,
-                    "ymin": 5800000,
-                    "xmax": 1700000,
-                    "ymax": 7600000,
-                    "spatialReference": {
-                        "wkid": 3857
-                    }
-                }
-            },
-            "MappingResourceRegistryFactory": {
-                "_knownServices": {
-                    "services": [
-                        {
-                            "id": "streets",
-                            "type": "AGS_TILED",
-                            "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
-                        }
-                    ]
-                }
+    "custominfo": {
+      "CustomInfoToggleTool": [
+        {
+          "id": "customInfoTool",
+          "activateOnStartup": true,
+          "title": "Information",
+          "tooltip": "Information",
+          "iconClass": "icon-custom-info-info",
+          "toolClass": "ctInfo",
+          "togglable": true,
+          "widgetSettings": {
+            "content": "This app shows the functionality of the Clock bundle which allows to display the user's current time and day of the month in map.apps. There are two representations available that can be selected via live configuration. The default is an analog clock which can be changed to a digital clock.",
+            "window": {
+              "marginBox": {
+                "w": 300,
+                "h": 150,
+                "l": 25,
+                "b": 70
+              },
+              "draggable": true,
+              "closable": true,
+              "modal": false,
+              "maximizable": false,
+              "resizable": false,
+              "title": "Information"
             }
-        },
-        "toolrules": {
-            "ToolActiveStateManager": {
-                "activateOnStartToolIds": [
-                    "clockToggleTool"
-                ]
-            }
-        },
-        "toolset": {
-            "ToolsetManager": {
-                "toolsets": []
-            }
+          }
         }
+      ]
+    },
+    "map": {
+      "MapModelFactory": {
+        "_configData": {
+          "maps": [
+            {
+              "baseLayer": [
+                {
+                  "id": "streets",
+                  "title": "Streets",
+                  "service": "streets",
+                  "layers": [
+                    "*"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "MapState": {
+        "initialExtent": {
+          "xmin": 600000,
+          "ymin": 5800000,
+          "xmax": 1700000,
+          "ymax": 7600000,
+          "spatialReference": {
+            "wkid": 3857
+          }
+        }
+      },
+      "MappingResourceRegistryFactory": {
+        "_knownServices": {
+          "services": [
+            {
+              "id": "streets",
+              "type": "AGS_TILED",
+              "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+            }
+          ]
+        }
+      }
+    },
+    "toolrules": {
+      "ToolActiveStateManager": {
+        "activateOnStartToolIds": [
+          "clockToggleTool"
+        ]
+      }
+    },
+    "toolset": {
+      "ToolsetManager": {
+        "toolsets": []
+      }
     }
+  }
 }
