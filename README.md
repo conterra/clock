@@ -5,6 +5,8 @@ Sample App
 ------------------
 http://www.mapapps.de/mapapps/resources/apps/downloads_clock/index.html
 
+![Screenshot clock](https://github.com/conterra/mapapps-clock/blob/master/clock.JPG)
+
 Installation Guide
 ------------------
 No further Configuration is needed for your app to make this bundle work.
