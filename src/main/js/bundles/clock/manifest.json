@@ -1,5 +1,5 @@
 {
-    "Bundle-SymbolicName": "clock",
+    "Bundle-SymbolicName": "dn_clock",
     "Bundle-Version": "1.0.2-SNAPSHOT",
     "Bundle-Name": "Clock",
     "Bundle-Description": "Simple bundle that displays the current time",
