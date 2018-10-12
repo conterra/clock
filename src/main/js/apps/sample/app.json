@@ -13,7 +13,7 @@
       "parametermanager@^3.2.1",
       "custominfo@^3.2.1",
       "banner@^3.2.1",
-      "clock"
+      "dn_clock"
     ]
   },
   "bundles": {
