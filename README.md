@@ -1,10 +1,6 @@
 # Clock Bundle
 This bundle allows to display the user's current time and day of the month in map.apps. There are two representations available that can be selected via live configuration. The default is an analog clock which can be changed to a digital clock.
 
-Sample App
-------------------
-https://demos.conterra.de/mapapps/resources/apps/downloads_clock/index.html
-
 ![Screenshot clock](https://github.com/conterra/mapapps-clock/blob/master/clock.JPG)
 
 Installation Guide
